@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#112c24"><title>Rescue Relay · Make the next pickup possible</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+<header class="topbar"><a class="brand" href="/" aria-label="Rescue Relay home"><span class="brand-mark">↗</span> Rescue Relay</a><span class="event">OPENROUTER × META <b>$1 CHALLENGE</b></span></header>
+<main>
+  <section class="hero"><div><div class="eyebrow">SMALL MODEL. SECOND CHANCES.</div><h1>A cancellation shouldn't<br>cancel the rescue.</h1><p>Muse Ember proposes a new pickup plan. Our code checks every route.<br class="desktop"> A human decides what happens next.</p></div><div class="hero-badge"><span class="pulse"></span><span>Built for<br><strong>the unexpected.</strong></span></div></section>
+  <div class="disclosure"><span class="label">SYNTHETIC DISPATCH DRILL</span><span>Fictional drivers, pickup sites and timing. No food or messages are dispatched.</span></div>
+  <section class="workspace">
+    <aside class="control panel">
+      <div class="section-title"><span class="step">01</span><h2>What changed?</h2></div>
+      <p class="hint">Choose unavailable drivers. The rest of the plan stays with its original driver.</p>
+      <div id="drivers" class="driver-list"></div>
+      <div class="scenarios"><button id="recoverable" type="button">One cancellation</button><button id="impossible" type="button">Stress test: two out</button></div>
+      <label class="field-label" for="note">Dispatcher note <span>optional context</span></label>
+      <textarea id="note" maxlength="1600" rows="3">Leo's van broke down. Save the pickups if you can, but don't disturb Sam's route.</textarea>
+      <p class="small">Unavailable-driver selections above are authoritative. Notes cannot change capacity or time windows.</p>
+      <button id="live" class="primary" type="button">Replan with Muse Ember <span>↗</span></button>
+      <button id="offline" class="secondary" type="button">Run offline drill</button>
+      <p id="readiness" class="small"></p>
+      <details class="how"><summary>What the checker guarantees</summary><ul><li>Capacity stays within each van's limit.</li><li>Every pickup fits its full service window.</li><li>Travel and hub return fit driver availability.</li><li>Unaffected pickups keep their driver.</li><li>No missing, duplicate or invented IDs.</li></ul><p>This checks a synthetic schedule, not traffic, food safety or real-world feasibility. It does not prove the plan is optimal.</p></details>
+    </aside>
+    <section class="results panel" aria-labelledby="plan-heading">
+      <div class="result-heading"><div class="section-title"><span class="step">02</span><h2 id="plan-heading">A plan you can inspect.</h2></div><span id="mode" class="chip">NOT RUN</span></div>
+      <div id="status" role="status" aria-live="polite" class="status neutral">Pick a cancellation, then run a drill or connect Ember.</div>
+      <div id="metrics" class="metrics"></div>
+      <div class="plan-label"><span>PICKUP BOARD</span><span>ALL TIMES ARE PM · SIMULATED</span></div>
+      <div id="board" class="board"></div>
+      <div id="checks" class="checks" hidden></div>
+      <div class="receipt"><div><span class="eyebrow">MEASURE THE WORK, NOT THE HYPE.</span><h3 id="cost">No model call yet</h3><p id="receipt-detail">A live run will show the returned model, latency, tokens and OpenRouter-reported cost.</p></div><button id="download" class="text-button" type="button" disabled>Export run evidence ↓</button></div>
+    </section>
+  </section>
+  <footer><span>AI proposes. Code checks. People decide.</span><span>Local prototype · No automatic dispatch · <a href="https://openrouter.ai/meta/muse-ember" target="_blank" rel="noreferrer">Muse Ember ↗</a></span></footer>
+</main>
+</body></html>

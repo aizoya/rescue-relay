@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#112c24"><title>Rescue Relay · Make the next pickup possible</title><style>:root{--ink:#17352b;--forest:#163c2e;--paper:#f5f4ed;--line:#dedfd4;--muted:#69766b;--orange:#f4b25b;--red:#ab4238;--green:#226e47;--white:#fffefa;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}
+*{box-sizing:border-box}body{margin:0}button,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}button:focus-visible,a:focus-visible,summary:focus-visible,textarea:focus-visible{outline:3px solid #e5a949;outline-offset:3px}a{color:inherit}button{transition:background .15s,transform .15s}button:active:not(:disabled){transform:translateY(1px)}.topbar{height:82px;max-width:1380px;margin:auto;padding:0 44px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-size:23px;font-weight:750;letter-spacing:-.8px;text-decoration:none;display:flex;align-items:center;gap:10px}.brand-mark{display:grid;place-items:center;width:35px;height:35px;background:var(--forest);color:white;border-radius:11px;font-size:27px}.event{font-size:10px;letter-spacing:1.4px;color:var(--muted);display:flex;align-items:center;gap:18px}.event b{background:#e9ecdf;border:1px solid var(--line);padding:8px 10px;border-radius:5px;color:var(--ink);font-size:10px}main{max-width:1380px;padding:0 44px;margin:auto}.hero{display:flex;align-items:center;justify-content:space-between;padding:44px 0 32px;gap:25px}.eyebrow{font-size:10px;letter-spacing:1.7px;font-weight:750;color:var(--green)}h1{font-size:clamp(30px,3.35vw,48px);font-weight:650;letter-spacing:-1.8px;line-height:1.09;margin:13px 0 16px}p{line-height:1.5}.hero p{font-size:14px;color:var(--muted);margin:0}.hero-badge{width:190px;height:128px;border-radius:90px;background:#e6ebd9;transform:rotate(-5deg);display:flex;align-items:center;justify-content:center;gap:12px;font-size:13px;line-height:1.5}.hero-badge strong{font-size:16px}.pulse{width:12px;height:12px;background:#719754;border-radius:50%;box-shadow:0 0 0 6px #d8e2c5}.disclosure{display:flex;align-items:center;gap:15px;border-top:1px solid var(--line);padding:13px 0;color:var(--muted);font-size:10px}.label{font-size:9px;letter-spacing:1px;color:var(--ink);font-weight:750;white-space:nowrap}.workspace{display:grid;grid-template-columns:328px minmax(0,1fr);gap:18px}.panel{background:var(--white);border:1px solid var(--line);border-radius:14px}.control{padding:22px}.section-title{display:flex;align-items:center;gap:10px}h2{font-size:16px;margin:0;letter-spacing:-.3px;font-weight:650}.step{font-size:10px;border:1px solid var(--line);border-radius:50%;width:25px;height:25px;display:grid;place-items:center;color:var(--muted)}.hint{font-size:11px;color:var(--muted);margin:12px 0 16px}.driver-list{display:grid;gap:7px}.driver{display:flex;align-items:center;text-align:left;gap:11px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:white;width:100%}.avatar{width:30px;height:30px;border-radius:50%;background:#edf0e4;display:grid;place-items:center;font-size:12px;font-weight:700}.driver-copy{flex:1}.driver-copy strong{display:block;font-size:12px}.driver-copy small{font-size:9px;color:var(--muted)}.availability{font-size:9px;font-weight:700;color:var(--green);padding:4px 6px;background:#edf5e9;border-radius:4px}.driver[aria-pressed=true]{background:#fff5ef;border-color:#e6b4a0}.driver[aria-pressed=true] .availability{color:var(--red);background:#f9e6dd}.driver[aria-pressed=true] .avatar{background:#f4e0d5}.scenarios{display:flex;gap:8px;margin:11px 0 19px}.scenarios button{background:transparent;border:0;border-bottom:1px dashed #a8b2a2;padding:3px 0;font-size:9px;color:var(--muted)}.field-label{font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}.field-label span{font-size:9px;color:var(--muted);font-weight:400}textarea{resize:vertical;min-height:80px;max-height:200px;width:100%;padding:10px;border:1px solid var(--line);background:#fafbf6;border-radius:7px;font-size:11px;line-height:1.5;color:var(--ink)}.small{font-size:9px;line-height:1.5;color:var(--muted);margin:7px 0 12px}.primary,.secondary{width:100%;padding:12px;border-radius:7px;font-size:11px;font-weight:650}.primary{background:var(--forest);color:white;border:1px solid var(--forest);display:flex;justify-content:space-between;margin-top:14px}.primary:not(:disabled):hover{background:#235640}.secondary{margin-top:8px;background:#f1f1e8;border:1px solid var(--line);color:var(--ink)}.secondary:not(:disabled):hover{background:#e5ead8}.how{font-size:10px;border-top:1px solid var(--line);padding-top:13px;color:var(--muted)}.how summary{font-size:10px;color:var(--ink);cursor:pointer}.how ul{padding-left:18px;line-height:1.8}.results{padding:22px 24px;display:flex;flex-direction:column}.result-heading{display:flex;justify-content:space-between;gap:10px;align-items:center}.chip{font-size:8px;letter-spacing:1px;padding:6px 9px;border-radius:4px;background:#eeefe7;color:var(--muted);font-weight:700}.chip.live{color:#1f6944;background:#e5f2df}.status{padding:12px 13px;margin:17px 0;font-size:11px;border-radius:6px;line-height:1.45;border:1px solid var(--line)}.status.neutral{background:#f3f4eb;color:var(--muted)}.status.success{background:#eef5e8;border-color:#c9dfbf;color:#2c5e39}.status.warning{background:#fff5df;border-color:#ead6aa;color:#886019}.status.error{background:#fff0eb;border-color:#eac2b9;color:var(--red)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);padding:1px 0 18px;gap:20px}.metric{border-right:1px solid var(--line)}.metric:last-child{border:0}.metric strong{font-size:27px;letter-spacing:-1px;line-height:1.2;font-weight:650}.metric span{display:block;font-size:9px;color:var(--muted);margin-top:4px}.metric em{font-size:11px;font-style:normal;color:var(--muted);margin-left:3px}.plan-label{display:flex;justify-content:space-between;font-size:8px;letter-spacing:1.1px;color:var(--muted);padding:13px 0 10px;border-top:1px solid var(--line)}.board{display:grid;gap:7px}.pickup{display:grid;grid-template-columns:30px 1.4fr 1fr auto;align-items:center;gap:10px;padding:11px 13px;background:#f7f8f1;border:1px solid #e7e9df;border-radius:7px}.pickup .id{font-size:11px;color:var(--muted);width:23px;height:23px;display:grid;place-items:center;border:1px solid #d8ddcf;border-radius:5px}.pickup strong{font-size:11px;display:block}.pickup small{font-size:9px;color:var(--muted);display:block;margin-top:3px}.pickup .tag{font-size:8px;font-weight:700;padding:5px 7px;background:#e9eddf;border-radius:4px;white-space:nowrap}.pickup.recovered{background:#eef5e7;border-color:#c7dab7}.pickup.recovered .tag{background:#dcebcf;color:#377334}.pickup.unassigned{background:#fff5e6;border-color:#e9d2ab}.pickup.unassigned .tag{background:#f7e6c4;color:#8a611f}.pickup.invalid{background:#fff1eb;border-color:#e4b7aa}.checks{margin-top:13px;font-size:10px;padding:10px 13px;border:1px solid var(--line);border-radius:7px;line-height:1.5}.checks ul{padding-left:15px;margin:7px 0}.receipt{border-top:1px solid var(--line);margin-top:auto;padding-top:18px;display:flex;justify-content:space-between;gap:15px;align-items:center}.receipt .eyebrow{font-size:8px;letter-spacing:1.2px}.receipt h3{font-size:20px;font-weight:600;letter-spacing:-.5px;margin:8px 0}.receipt p{font-size:9px;line-height:1.5;color:var(--muted);max-width:490px;overflow-wrap:anywhere;margin:0}.text-button{border:0;background:transparent;font-size:9px;white-space:nowrap;color:var(--green);padding:5px 0}footer{display:flex;justify-content:space-between;gap:15px;font-size:9px;color:var(--muted);padding:22px 0 28px}footer>span:first-child{color:var(--ink);font-weight:600}footer a{text-decoration:none}.loading{animation:blink 1s infinite}@keyframes blink{50%{opacity:.5}}@media(min-width:1100px){.results{min-height:615px}}@media(max-width:900px){.workspace{grid-template-columns:280px minmax(0,1fr)}.topbar{padding:0 24px}main{padding:0 24px}.control{padding:17px}.results{padding:17px}.pickup{grid-template-columns:24px 1fr auto}.pickup .schedule{grid-column:2}.pickup .tag{grid-column:3;grid-row:auto}.receipt{flex-direction:column;align-items:flex-start;margin-top:18px}.hero-badge{width:145px;height:110px}.metrics{gap:12px}.metrics strong{font-size:24px}}@media(max-width:680px){main{padding:0 16px}.topbar{height:65px;padding:0 16px}.event{font-size:8px;gap:7px}.event b{display:none}.brand{font-size:20px}.hero{padding:28px 0 25px}.hero-badge{display:none}h1{font-size:34px}.hero p{font-size:12px}.desktop{display:none}.disclosure{align-items:flex-start;flex-direction:column;gap:6px;font-size:9px}.workspace{grid-template-columns:1fr}.control{padding:19px}.driver-list{grid-template-columns:repeat(3,1fr)}.driver{padding:9px 6px;gap:5px;flex-wrap:wrap}.avatar{width:25px;height:25px}.availability{width:100%;text-align:center}.driver-copy small{font-size:8px}.driver-copy strong{font-size:11px}.hint{font-size:11px}.small{font-size:10px}.results{padding:19px}.pickup{grid-template-columns:24px 1fr 1fr auto;gap:7px}.pickup .schedule{grid-column:auto}.pickup .tag{grid-column:auto}.pickup strong{font-size:10px}.pickup small{font-size:8px}.pickup .tag{font-size:7px;padding:4px}.result-heading h2{font-size:14px}.metrics strong{font-size:27px}footer{flex-direction:column;gap:8px}.how{font-size:11px}.how summary{font-size:11px}}
+</style></head>
+<body>
+<header class="topbar"><a class="brand" href="#" aria-label="Rescue Relay home"><span class="brand-mark">↗</span> Rescue Relay</a><span class="event">OPENROUTER × META <b>$1 CHALLENGE</b></span></header>
+<main>
+  <section class="hero"><div><div class="eyebrow">SMALL MODEL. SECOND CHANCES.</div><h1>A cancellation shouldn't<br>cancel the rescue.</h1><p>Muse Ember proposes a new pickup plan. Our code checks every route.<br class="desktop"> A human decides what happens next.</p></div><div class="hero-badge"><span class="pulse"></span><span>Built for<br><strong>the unexpected.</strong></span></div></section>
+  <div class="disclosure"><span class="label">SYNTHETIC DISPATCH DRILL</span><span>Fictional drivers, pickup sites and timing. No food or messages are dispatched.</span></div>
+  <section class="workspace">
+    <aside class="control panel">
+      <div class="section-title"><span class="step">01</span><h2>What changed?</h2></div>
+      <p class="hint">Choose unavailable drivers. The rest of the plan stays with its original driver.</p>
+      <div id="drivers" class="driver-list"></div>
+      <div class="scenarios"><button id="recoverable" type="button">One cancellation</button><button id="impossible" type="button">Stress test: two out</button></div>
+      <label class="field-label" for="note">Dispatcher note <span>optional context</span></label>
+      <textarea id="note" maxlength="1600" rows="3">Leo's van broke down. Save the pickups if you can, but don't disturb Sam's route.</textarea>
+      <p class="small">Unavailable-driver selections above are authoritative. Notes cannot change capacity or time windows.</p>
+      <button id="live" class="primary" type="button">Replan with Muse Ember <span>↗</span></button>
+      <button id="offline" class="secondary" type="button">Run offline drill</button>
+      <p id="readiness" class="small"></p>
+      <details class="how"><summary>What the checker guarantees</summary><ul><li>Capacity stays within each van's limit.</li><li>Every pickup fits its full service window.</li><li>Travel and hub return fit driver availability.</li><li>Unaffected pickups keep their driver.</li><li>No missing, duplicate or invented IDs.</li></ul><p>This checks a synthetic schedule, not traffic, food safety or real-world feasibility. It does not prove the plan is optimal.</p></details>
+    </aside>
+    <section class="results panel" aria-labelledby="plan-heading">
+      <div class="result-heading"><div class="section-title"><span class="step">02</span><h2 id="plan-heading">A plan you can inspect.</h2></div><span id="mode" class="chip">NOT RUN</span></div>
+      <div id="status" role="status" aria-live="polite" class="status neutral">Pick a cancellation, then run a drill or connect Ember.</div>
+      <div id="metrics" class="metrics"></div>
+      <div class="plan-label"><span>PICKUP BOARD</span><span>ALL TIMES ARE PM · SIMULATED</span></div>
+      <div id="board" class="board"></div>
+      <div id="checks" class="checks" hidden></div>
+      <div class="receipt"><div><span class="eyebrow">MEASURE THE WORK, NOT THE HYPE.</span><h3 id="cost">No model call yet</h3><p id="receipt-detail">A live run will show the returned model, latency, tokens and OpenRouter-reported cost.</p></div><button id="download" class="text-button" type="button" disabled>Export run evidence ↓</button></div>
+    </section>
+  </section>
+  <footer><span>AI proposes. Code checks. People decide.</span><span>Local prototype · No automatic dispatch · <a href="https://openrouter.ai/meta/muse-ember" target="_blank" rel="noreferrer">Muse Ember ↗</a></span></footer>
+</main>
+<script type="module">
+const FIXTURE = {
+  id: 'rescue-fixture-v1',
+  label: 'Synthetic dispatch drill. Fictional people, places, routes, capacity and timing. No food dispatched.',
+  timeOrigin: '7:00 PM', serviceMinutes: 5, depot: 'hub',
+  drivers: [
+    { id: 'maya', name: 'Maya', capacity: 12, available: [0, 75] },
+    { id: 'leo', name: 'Leo', capacity: 8, available: [0, 65] },
+    { id: 'sam', name: 'Sam', capacity: 7, available: [0, 70] }
+  ],
+  pickups: [
+    { id: 'a', name: 'Market surplus', location: 'market', crates: 4, window: [10, 30], originalDriver: 'maya' },
+    { id: 'b', name: 'Bakery closeout', location: 'bakery', crates: 3, window: [20, 40], originalDriver: 'leo' },
+    { id: 'c', name: 'Community kitchen', location: 'kitchen', crates: 3, window: [30, 50], originalDriver: 'leo' },
+    { id: 'd', name: 'Café surplus', location: 'cafe', crates: 4, window: [15, 35], originalDriver: 'sam' },
+    { id: 'e', name: 'Corner grocer', location: 'grocer', crates: 2, window: [30, 50], originalDriver: 'sam' }
+  ],
+  travel: {
+    hub: { hub: 0, market: 10, bakery: 8, kitchen: 12, cafe: 9, grocer: 13 },
+    market: { hub: 10, market: 0, bakery: 7, kitchen: 10, cafe: 12, grocer: 15 },
+    bakery: { hub: 8, market: 7, bakery: 0, kitchen: 8, cafe: 8, grocer: 10 },
+    kitchen: { hub: 12, market: 10, bakery: 8, kitchen: 0, cafe: 9, grocer: 8 },
+    cafe: { hub: 9, market: 12, bakery: 8, kitchen: 9, cafe: 0, grocer: 10 },
+    grocer: { hub: 13, market: 15, bakery: 10, kitchen: 8, cafe: 10, grocer: 0 }
+  }
+};
+
+function validateInput(input) {
+  if (!input || typeof input !== 'object' || Array.isArray(input)) throw new Error('Expected a JSON object.');
+  if (!Array.isArray(input.disabledDrivers) || input.disabledDrivers.length > 3) throw new Error('Choose unavailable drivers.');
+  const known = new Set(FIXTURE.drivers.map(d => d.id));
+  if (input.disabledDrivers.some(id => !known.has(id)) || new Set(input.disabledDrivers).size !== input.disabledDrivers.length) throw new Error('Unknown or duplicate driver.');
+  if (input.note !== undefined && (typeof input.note !== 'string' || input.note.length > 1600)) throw new Error('Dispatcher note must be at most 1600 characters.');
+  if (!['offline', 'live'].includes(input.mode)) throw new Error('Choose offline or live mode.');
+  return { disabledDrivers: [...input.disabledDrivers], note: input.note || '', mode: input.mode };
+}
+
+function validatePlan(plan, disabledDrivers, fixture = FIXTURE) {
+  const errors = [], warnings = [], disabled = new Set(disabledDrivers);
+  const routes = [], assignments = [], seen = new Set();
+  const drivers = new Map(fixture.drivers.map(d => [d.id, d]));
+  const pickups = new Map(fixture.pickups.map(p => [p.id, p]));
+  if (!plan || typeof plan !== 'object' || !Array.isArray(plan.assignments) || plan.assignments.length > 50 || !Array.isArray(plan.unassigned)) {
+    return { valid: false, errors: ['Proposal schema is invalid. Expected assignments and unassigned arrays.'], warnings, routes, assignments, unassigned: fixture.pickups.map(p => p.id), retainedCrates: 0, recoveredCrates: 0, affectedCrates: fixture.pickups.filter(p => disabled.has(p.originalDriver)).reduce((n,p)=>n+p.crates,0) };
+  }
+  for (const item of plan.assignments) {
+    if (!item || typeof item !== 'object' || !pickups.has(item.pickupId) || !drivers.has(item.driverId) || !Number.isInteger(item.startMinute) || item.startMinute < 0 || item.startMinute > 1440) {
+      errors.push('An assignment contains unknown IDs or an invalid time.'); continue;
+    }
+    const pickup = pickups.get(item.pickupId);
+    if (seen.has(item.pickupId)) errors.push(`Duplicate pickup: ${item.pickupId}.`);
+    seen.add(item.pickupId);
+    if (disabled.has(item.driverId)) errors.push(`${item.driverId} is unavailable.`);
+    if (!disabled.has(pickup.originalDriver) && item.driverId !== pickup.originalDriver) errors.push(`${item.pickupId}: unaffected assignment must remain with ${pickup.originalDriver}.`);
+    if (item.startMinute < pickup.window[0] || item.startMinute + fixture.serviceMinutes > pickup.window[1]) errors.push(`${item.pickupId}: pickup service does not fit its window.`);
+    assignments.push({ pickupId: item.pickupId, driverId: item.driverId, startMinute: item.startMinute });
+  }
+  const unassigned = [];
+  for (const id of plan.unassigned) {
+    if (typeof id !== 'string' || !pickups.has(id)) { errors.push('Unassigned list contains an unknown pickup.'); continue; }
+    if (seen.has(id)) errors.push(`Pickup ${id} is duplicated or both assigned and unassigned.`);
+    seen.add(id); unassigned.push(id);
+    if (!disabled.has(pickups.get(id).originalDriver)) errors.push(`${id}: an unaffected pickup was dropped.`);
+  }
+  for (const pickup of fixture.pickups) if (!seen.has(pickup.id)) errors.push(`Pickup ${pickup.id} is missing from the proposal.`);
+  for (const driver of fixture.drivers) {
+    const stops = assignments.filter(a => a.driverId === driver.id).sort((a,b)=>a.startMinute-b.startMinute);
+    if (!stops.length) continue;
+    let previousLocation = fixture.depot, earliest = driver.available[0], crates = 0;
+    for (const stop of stops) {
+      const pickup = pickups.get(stop.pickupId), travel = fixture.travel[previousLocation]?.[pickup.location];
+      if (!Number.isFinite(travel) || stop.startMinute < earliest + travel) errors.push(`${driver.id}: cannot reach ${pickup.id} in time.`);
+      earliest = stop.startMinute + fixture.serviceMinutes;
+      previousLocation = pickup.location;
+      crates += pickup.crates;
+    }
+    const returnMinute = earliest + fixture.travel[previousLocation]?.[fixture.depot];
+    if (!Number.isFinite(returnMinute) || returnMinute > driver.available[1]) errors.push(`${driver.id}: return to hub exceeds availability.`);
+    if (crates > driver.capacity) errors.push(`${driver.id}: ${crates} crates exceeds capacity ${driver.capacity}.`);
+    routes.push({ driverId: driver.id, crates, capacity: driver.capacity, returnMinute, stops });
+  }
+  if (unassigned.length) warnings.push(`${unassigned.length} pickup(s) need a human. Do not dispatch an incomplete plan without review.`);
+  const valid = errors.length === 0;
+  const affectedCrates = fixture.pickups.filter(p => disabled.has(p.originalDriver)).reduce((n,p)=>n+p.crates,0);
+  const retainedCrates = valid ? assignments.reduce((n,a)=>n+pickups.get(a.pickupId).crates,0) : 0;
+  const recoveredCrates = valid ? assignments.filter(a=>disabled.has(pickups.get(a.pickupId).originalDriver)).reduce((n,a)=>n+pickups.get(a.pickupId).crates,0) : 0;
+  return { valid, errors: [...new Set(errors)], warnings, routes, assignments, unassigned, retainedCrates, recoveredCrates, affectedCrates };
+}
+
+// This bounded deterministic planner exists only for offline drills, never as a disguised model fallback.
+function offlineProposal(disabledDrivers) {
+  const disabled = new Set(disabledDrivers), active = FIXTURE.drivers.filter(d=>!disabled.has(d.id));
+  let best = { score: -1, proposal: null };
+  const allocations = [];
+  function assign(index, selected) {
+    if (index === FIXTURE.pickups.length) { allocations.push(selected); return; }
+    const p = FIXTURE.pickups[index];
+    const options = disabled.has(p.originalDriver) ? [...active.map(d=>d.id), null] : [p.originalDriver];
+    for (const id of options) assign(index+1, [...selected, id]);
+  }
+  assign(0, []);
+  for (const allocation of allocations) {
+    const proposal = { assignments: [], unassigned: [], summary: 'Deterministic offline drill. No model was called.' };
+    for (const d of active) {
+      const pickups = FIXTURE.pickups.filter((p,i)=>allocation[i]===d.id).sort((a,b)=>a.window[1]-b.window[1]);
+      let minute = d.available[0], location = FIXTURE.depot;
+      for (const p of pickups) {
+        minute = Math.max(p.window[0], minute+FIXTURE.travel[location][p.location]);
+        proposal.assignments.push({ pickupId:p.id, driverId:d.id, startMinute:minute });
+        minute += FIXTURE.serviceMinutes; location=p.location;
+      }
+    }
+    FIXTURE.pickups.forEach((p,i)=>{ if (allocation[i]===null) proposal.unassigned.push(p.id); });
+    const checked = validatePlan(proposal, disabledDrivers);
+    if (checked.valid && checked.retainedCrates > best.score) best = { score: checked.retainedCrates, proposal };
+  }
+  return best.proposal || { assignments:[], unassigned:FIXTURE.pickups.map(p=>p.id) };
+}
+
+
+// Self-contained offline build. No network calls or model requests.
+const fetch = async (url, options={}) => {
+ if(url === '/api/config') return {ok:true,json:async()=>({fixture:FIXTURE,model:'meta/muse-ember',live:{ready:false,reason:'Offline preview only. No model, credentials or internet needed. Use the local server version for approved live calls.'}})};
+ if(url === '/api/replan') {
+  const input=validateInput(JSON.parse(options.body));
+  if(input.mode!=='offline') return {ok:false,json:async()=>({error:'Live calls are unavailable in this offline file.'})};
+  const start=performance.now(); const proposal=offlineProposal(input.disabledDrivers);
+  return {ok:true,json:async()=>({proposal,checked:validatePlan(proposal,input.disabledDrivers),input,fixtureId:FIXTURE.id,dispatched:false,receipt:{mode:'offline',requestedModel:null,returnedModel:null,requestId:null,latencyMs:Math.round(performance.now()-start),promptTokens:null,completionTokens:null,costUsd:null,costSource:'No API call. Not a model result.',recordedAt:new Date().toISOString()}})};
+ }
+ throw new Error('Offline preview does not make network requests.');
+};
+
+const $=id=>document.getElementById(id);
+let config, disabled=new Set(['leo']), revision=0, pending=null, lastResult=null;
+const time=n=>{const hour=7+Math.floor(n/60);return `${hour}:${String(n%60).padStart(2,'0')}`;};
+const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
+function status(text,type='neutral'){$('status').textContent=text;$('status').className=`status ${type}`;}
+function buttons(busy=false){$('offline').disabled=busy;$('live').disabled=busy||!config?.live.ready;}
+function clearResult(){revision++;pending?.abort();pending=null;lastResult=null;$('download').disabled=true;$('mode').textContent='NOT RUN';$('mode').className='chip';$('checks').hidden=true;$('cost').textContent='No model call for this input';$('receipt-detail').textContent='Changed inputs clear the previous result. Run a new check before reviewing this schedule.';buttons();renderBaseline();status('Input changed. Run a fresh proposal for this cancellation.');}
+function renderDrivers(){
+  $('drivers').replaceChildren(...config.fixture.drivers.map(d=>{
+    const button=el('button',undefined,'driver');button.type='button';button.setAttribute('aria-pressed',String(disabled.has(d.id)));button.setAttribute('aria-label',`${d.name}, ${disabled.has(d.id)?'unavailable':'available'}, click to toggle`);
+    button.append(el('span',d.name[0],'avatar'));
+    const copy=el('span',undefined,'driver-copy');copy.append(el('strong',d.name),el('small',`${d.capacity} crate capacity`));button.append(copy,el('span',disabled.has(d.id)?'UNAVAILABLE':'AVAILABLE','availability'));
+    button.onclick=()=>{disabled.has(d.id)?disabled.delete(d.id):disabled.add(d.id);clearResult();renderDrivers();};return button;
+  }));
+}
+function metrics(covered,recovered,human){
+  $('metrics').replaceChildren(...[[covered,'crates covered in plan'],[recovered,'affected crates recovered'],[human,'pickups need a human']].map(([n,label])=>{const div=el('div',undefined,'metric');div.append(el('strong',String(n)),el('span',label));return div;}));
+}
+function renderBoard(result){
+  const checks=result?.checked;
+  $('board').replaceChildren(...config.fixture.pickups.map(p=>{
+    const assignment=checks?.assignments.find(a=>a.pickupId===p.id);
+    const affected=disabled.has(p.originalDriver);
+    const missing=checks?.unassigned.includes(p.id);
+    const recovered=checks?.valid&&affected&&assignment;
+    let tag='ORIGINAL', cls='';
+    if(!result&&affected){tag='AT RISK';cls='unassigned';}
+    if(result){tag=checks.valid?(missing?'NEEDS HUMAN':recovered?'RECOVERED':'PRESERVED'):'NOT ACCEPTED';cls=checks.valid?(missing?'unassigned':recovered?'recovered':''):'invalid';}
+    const card=el('div',undefined,`pickup ${cls}`);card.append(el('span',p.id.toUpperCase(),'id'));
+    const title=el('div');title.append(el('strong',p.name),el('small',`${p.crates} crates · window ${time(p.window[0])}–${time(p.window[1])}`));card.append(title);
+    const schedule=el('div',undefined,'schedule');
+    const driverId=result?assignment?.driverId:p.originalDriver;
+    const driver=config.fixture.drivers.find(d=>d.id===driverId);
+    schedule.append(el('strong',driver?.name||(missing?'Unassigned':'No assignment')),el('small',assignment?`Pickup ${time(assignment.startMinute)} PM`:(affected?'Driver unavailable':'Original assignment')));card.append(schedule,el('span',tag,'tag'));return card;
+  }));
+}
+function renderBaseline(){if(!config)return;metrics('—','—','—');renderBoard(null);}
+function renderResult(result){
+  lastResult=result;$('download').disabled=false;
+  const c=result.checked,r=result.receipt,live=r.mode==='live';
+  $('mode').textContent=live?'LIVE EMBER':'OFFLINE · NO AI';$('mode').className=`chip ${live?'live':''}`;
+  if(!c.valid)status('Proposal rejected by the checker. No plan accepted. Review the failed constraints below.','error');
+  else if(c.unassigned.length)status(`Checks passed for the assigned routes. ${c.unassigned.length} pickup(s) remain uncovered and need a human. Nothing has been dispatched.`,'warning');
+  else status('All five pickups covered. Capacity, travel, windows and availability checks passed. Awaiting human review; nothing dispatched.','success');
+  metrics(c.valid?c.retainedCrates:0,c.valid?c.recoveredCrates:0,c.valid?c.unassigned.length:'—');renderBoard(result);
+  const checkNodes=[];
+  if(c.errors.length){checkNodes.push(el('strong','Rejected constraints'));const list=el('ul');c.errors.forEach(e=>list.append(el('li',e)));checkNodes.push(list);}
+  else{checkNodes.push(el('strong','Checked routes'));const list=el('ul');c.routes.forEach(route=>list.append(el('li',`${route.driverId}: ${route.crates}/${route.capacity} crates · hub return ${time(route.returnMinute)} PM`)));checkNodes.push(list);if(c.warnings.length)checkNodes.push(el('p',c.warnings.join(' ')));}
+  $('checks').replaceChildren(...checkNodes);$('checks').hidden=false;
+  $('cost').textContent=!live?'Offline drill · no API call':r.costUsd===null?'Cost not reported':`$${r.costUsd.toFixed(6)} actual request cost`;
+  const details=live?`${r.returnedModel||'Returned model not reported'} · ${r.latencyMs} ms · ${r.promptTokens??'?'} input / ${r.completionTokens??'?'} output tokens. ${r.costSource} Request: ${r.requestId||'not reported'}.`:'Deterministic fixture planner only. This is not an Ember run, not real dispatch data, and not evidence of $1 challenge completion.';
+  $('receipt-detail').textContent=details;
+}
+async function run(mode){
+  const token=++revision;pending?.abort();pending=new AbortController();lastResult=null;$('download').disabled=true;$('checks').hidden=true;renderBaseline();$('mode').textContent=mode==='live'?'CALLING EMBER…':'RUNNING DRILL…';$('mode').className='chip loading';$('cost').textContent='Waiting for this run';$('receipt-detail').textContent=mode==='live'?'One request to Muse Ember through OpenRouter. No automatic retries.':'No model or paid service is being called.';status('Preparing a proposal, then checking every assignment.');buttons(true);
+  try{
+    const response=await fetch('/api/replan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode,disabledDrivers:[...disabled],note:$('note').value}),signal:pending.signal});
+    const result=await response.json();if(token!==revision)return;if(!response.ok)throw new Error(result.error||'Request failed.');renderResult(result);
+  }catch(error){if(token!==revision||error.name==='AbortError')return;status(error.message,'error');$('mode').textContent='FAILED · NO PLAN';$('mode').className='chip';$('cost').textContent='No accepted result';$('receipt-detail').textContent='No offline fallback was substituted. Check OpenRouter for any charge from the attempted live call.';}
+  finally{if(token===revision){pending=null;buttons();}}
+}
+$('offline').onclick=()=>run('offline');$('live').onclick=()=>run('live');$('note').addEventListener('input',clearResult);
+$('recoverable').onclick=()=>{disabled=new Set(['leo']);$('note').value="Leo's van broke down. Save the pickups if you can, but don't disturb Sam's route.";clearResult();renderDrivers();};
+$('impossible').onclick=()=>{disabled=new Set(['leo','maya']);$('note').value='Two vans are unavailable. Keep Sam’s existing pickups. Tell us clearly what cannot be rescued.';clearResult();renderDrivers();};
+$('download').onclick=()=>{if(!lastResult)return;const blob=new Blob([JSON.stringify({app:'Rescue Relay',syntheticData:true,noDispatch:true,...lastResult},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const anchor=el('a');anchor.href=url;anchor.download=`rescue-relay-${lastResult.receipt.mode}-${Date.now()}.json`;anchor.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+try{const response=await fetch('/api/config');if(!response.ok)throw new Error('Cannot load the local app.');config=await response.json();$('readiness').textContent=config.live.reason;renderDrivers();renderBaseline();buttons();}catch(error){status(error.message,'error');$('live').disabled=true;$('offline').disabled=true;}
+
+</script></body></html>

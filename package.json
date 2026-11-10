@@ -1,0 +1,9 @@
+{
+  "name": "rescue-relay",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Muse Ember proposes food-rescue replans; deterministic checks gate every assignment.",
+  "scripts": { "start": "node server.mjs", "test": "node --test", "check": "node --check server.mjs && node --check src/engine.mjs && node --check src/provider.mjs && node --check public/app.js" },
+  "engines": { "node": ">=22" }
+}

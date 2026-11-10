@@ -1,0 +1,5 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> rescue-relay@0.1.0 check
+> node --check server.mjs && node --check src/engine.mjs && node --check src/provider.mjs && node --check public/app.js
+

@@ -1,0 +1,33 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> rescue-relay@0.1.0 test
+> node --test
+
+✔ input requires known unique driver IDs, bounded note, and explicit mode (1.679835ms)
+✔ all eight disabled-driver combinations produce valid, completely accounted synthetic drills (3.271973ms)
+✔ rejects malformed proposals and malformed assignment values without throwing (1.771284ms)
+✔ rejects duplicate, missing, unknown, and assigned-plus-unassigned pickup IDs (2.30546ms)
+✔ preserves unaffected assignments, prevents dropped pickups and unavailable drivers (2.356256ms)
+✔ counts full onboard crate load against capacity; exact capacity is permitted (0.287754ms)
+✔ requires full service inside pickup window, including exact end boundary (0.302526ms)
+✔ checks travel from depot and between stops, and driver start availability (4.408398ms)
+✔ requires final hub return within availability; exact boundary allowed (0.572163ms)
+✔ live calls require explicit private approval, key, and required model (2.288584ms)
+✔ mock request pins model and schema and reports only provider-supplied usage (2.312651ms)
+✔ missing, malformed, negative, and non-finite costs are never estimated or treated as zero (2.787917ms)
+✔ provider HTTP errors are surfaced without credential leakage or hidden fallback (0.540145ms)
+✔ network failures and timeouts fail closed (0.487055ms)
+✔ unreadable response JSON fails closed (3.774186ms)
+✔ offline HTTP result is explicitly synthetic, non-dispatched, and not a model cost receipt (19.065714ms)
+✔ server rejects live use by default without calling external services (6.575954ms)
+✔ server independently rejects an invalid mock model proposal (2.615568ms)
+✔ server enforces local Host, same Origin, JSON input, and size limits (7.75882ms)
+✔ one mocked live request at a time; busy state clears after failure (3.594815ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 149.847034
