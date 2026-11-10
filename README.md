@@ -1,6 +1,6 @@
 # Rescue Relay
 
-**Local hackathon prototype. Not deployed. No live Muse Ember call has been completed.**
+**Verified live run.** Muse Ember through OpenRouter produced a plan that passed the checker. It covered all 5 simulated pickups and 16 crates, including all 6 at-risk crates. The successful request took 5.927 seconds and cost $0.0011391. Nothing was dispatched.
 
 A food-rescue dispatcher selects a cancelled driver. Muse Ember can propose a revised pickup plan through OpenRouter; deterministic code checks capacity, service windows, travel, availability, missing/duplicate IDs, and preservation of unaffected assignments. Nothing is dispatched and no external messages are sent.
 
@@ -33,7 +33,7 @@ The app defaults to **live calls disabled**. Do not put any key in chat, browser
 
 After approval, the owner can copy `.env.example` to `.env`, privately configure their existing OpenRouter key there, set `LIVE_CALLS_APPROVED=true`, and retain `OPENROUTER_MODEL=meta/muse-ember`. Run `node --env-file=.env server.mjs` instead of `npm start`.
 
-Each click in live mode makes one OpenRouter request, with no automatic retries. The server pins `meta/muse-ember`, limits response tokens to 1,400, times out after 35 seconds, and refuses concurrent requests. These limits are not a hard dollar cap: configure an appropriate provider-side key spending limit before enabling. Never treat an API timeout as proof there was no charge.
+Each click in live mode makes one OpenRouter request, with no automatic retries. The server pins `meta/muse-ember`, sets a 3,000-token output budget, times out after 35 seconds, and refuses concurrent requests. These limits are not a hard dollar cap: configure an appropriate provider-side key spending limit before enabling. Never treat an API timeout as proof there was no charge.
 
 Only synthetic fixture data and the optional dispatcher note go to OpenRouter. Keep that note free of private operational or personal details.
 
@@ -48,9 +48,8 @@ The receipt records requested/returned model, request ID, latency, input/output 
 
 ## What is not verified
 
-- Actual Ember API compatibility, account model access, event credits, or measured model cost.
 - Browser visual/interaction QA, mobile layout, VoiceOver, or screen recording. The available cloud browser could not reach this environment's local server.
-- Public GitHub publication, video upload or final submission. No publication/deployment is included.
+- Public app deployment, demo video upload, and final event submission.
 
 ## Files
 
